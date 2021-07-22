@@ -10,6 +10,8 @@ public class TemporaryPasswordUtil {
 	private TemporaryPasswordUtil() {}
 	
 	private PatternCheckUtil pattern = PatternCheckUtil.getInstance();
+
+	
 	
 	public String getTemporaryPassword() {
 		Random rand = new Random();
@@ -28,4 +30,7 @@ public class TemporaryPasswordUtil {
 		}while(!pattern.patternCheck(ranPw,pattern.passwordPattern));
 		return ranPw;
 	}
+	
+	
+	
 }
