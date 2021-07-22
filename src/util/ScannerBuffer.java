@@ -27,4 +27,8 @@ public class ScannerBuffer {
 			return 0;			
 		}
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9

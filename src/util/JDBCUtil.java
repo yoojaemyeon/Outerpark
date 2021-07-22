@@ -55,7 +55,11 @@ public class JDBCUtil {
 		}
 	}
 	
+<<<<<<< HEAD
 	public int update(String query) {
+=======
+	public int Update(String query) {
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 		try {
 			conn = this.getConnection();
 			pstm = conn.prepareStatement(query);
@@ -68,43 +72,67 @@ public class JDBCUtil {
 		}
 	}
 	
+<<<<<<< HEAD
 	public boolean selectBoolean(String query) {
+=======
+	public boolean SelectBoolean(String query) {
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 		try {
 			conn = this.getConnection();
 			pstm = conn.prepareStatement(query);
 			rs = pstm.executeQuery();
+<<<<<<< HEAD
 			boolean flag = rs.next();
 			DBclose(conn, pstm, rs);
 			return flag;
+=======
+			return rs.next();
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 		}catch(Exception e) {
 			e.printStackTrace();
 			return false;
 		}
 	}
 	
+<<<<<<< HEAD
 	public String selectString(String query,String col) {
+=======
+	public String SelectString(String query,String col) {
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 		try {
 			conn = this.getConnection();
 			pstm = conn.prepareStatement(query);
 			rs = pstm.executeQuery();
 			rs.next();
+<<<<<<< HEAD
 			String str = rs.getString(col);
 			DBclose(conn, pstm, rs);
 			return str;
+=======
+			return rs.getString(col);
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 		}catch(Exception e) {
 			return null;
 		}
 	}
 	
+<<<<<<< HEAD
 	public int selectint(String query,String col) {
+=======
+	public int Selectint(String query,String col) {
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 		try {
 			conn = this.getConnection();
 			pstm = conn.prepareStatement(query);
 			rs = pstm.executeQuery();
 			rs.next();
+<<<<<<< HEAD
 			int i = rs.getInt(col);
 			DBclose(conn, pstm, rs);
 			return i;
+=======
+			return rs.getInt(col);
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 		}catch(Exception e) {
 			return 0;
 		}

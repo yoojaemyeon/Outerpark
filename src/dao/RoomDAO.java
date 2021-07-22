@@ -21,23 +21,36 @@ public class RoomDAO {
 	public int insertRoom(RoomVO vo) {
 		String query = String.format("INSERT INTO ROOM VALUES (%s,'%s','%s',%d ,%d, %d, %d, '%s','%s')"
 				,"SEQ_ROOM.NEXTVAL", vo.getUserId(), vo.getRoomName(), vo.getMaxCapacity(), vo.getRoomCount(), vo.getBedCount(), vo.getRoomPrice(), vo.getCity(), vo.getExplanation());
+<<<<<<< HEAD
 		return jdbc.update(query);
+=======
+		return jdbc.Update(query);
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 	}
 	
 	public int deleteRoom(RoomVO vo) {
 		String query = String.format("DELETE FROM ROOM WHERE ROOM_NUMBER = '%s' AND USER_ID = '%s'", vo.getRoomNumber(),LoginService.loginId.getUserId());
+<<<<<<< HEAD
 		return jdbc.update(query);
+=======
+		return jdbc.Update(query);
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 	}
 
 	public ArrayList<HashMap<String, Object>> select(OuterparkUserVO vo) {
 		String query = String.format("SELECT * FROM ROOM WHERE USER_ID = '%s'", vo.getUserId());
 		return jdbc.selectList(query);
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 	public ArrayList<HashMap<String, Object>> selectRoom (RoomVO vo) {
 		String query = String.format("SELECT * FROM ROOM WHERE CITY = '%s' AND MAX_CAPACITY >= %d", vo.getCity(), vo.getMaxCapacity());
 		return jdbc.selectList(query);
 	}
+<<<<<<< HEAD
 	
 	public int selectRoomPrice(int roomNumber) {
 		String query = String.format("SELECT ROOM_PRICE FROM ROOM WHERE ROOM_NUMBER = %d", roomNumber);
@@ -57,3 +70,11 @@ public class RoomDAO {
 		return jdbc.selectList(query);
 	}
 }
+=======
+	public int selectRoomPrice(int roomNumber) {
+		String query = String.format("SELECT ROOM_PRICE FROM ROOM WHERE ROOM_NUMBER = %d", roomNumber);
+		return jdbc.Selectint(query, "ROOM_PRICE");
+	}
+	
+}
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9

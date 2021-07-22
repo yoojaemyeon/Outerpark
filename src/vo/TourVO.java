@@ -9,14 +9,24 @@ public class TourVO {
 	private String city;
 	private String explanation;
 	
+<<<<<<< HEAD
 	public TourVO(int tourNumber) {
 		this.tourNumber = tourNumber;
 	}
 
+=======
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 	public TourVO(String city) {
 		this.city = city;
 	}
 	
+<<<<<<< HEAD
+=======
+	public TourVO(int tourNumber) {
+		this.tourNumber = tourNumber;
+	}
+
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 	public TourVO(String userId, String tourName, String tourTime, int tourPrice, String city,
 			String explanation) {
 		this.userId = userId;
@@ -88,4 +98,8 @@ public class TourVO {
 		return "TourVO [tourNumber=" + tourNumber + ", userId=" + userId + ", tourName=" + tourName + ", tourTime="
 				+ tourTime + ", tourPrice=" + tourPrice + ", city=" + city + ", explanation=" + explanation + "]";
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9

@@ -31,4 +31,8 @@ public class SHA256Util {
 			throw new RuntimeException();
 		}
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9

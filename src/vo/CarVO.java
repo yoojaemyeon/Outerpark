@@ -17,7 +17,11 @@ public class CarVO {
 		this.city = city;
 		this.carSeats = carSeats;
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 	public CarVO(String carNumber, String userId, String carKind, int carPrice, int carSeats, String city,
 			String carColor) {
 		this.carNumber = carNumber;
@@ -90,4 +94,9 @@ public class CarVO {
 		return "CarVO [carNumber=" + carNumber + ", userId=" + userId + ", carKind=" + carKind + ", carPrice="
 				+ carPrice + ", carSeats=" + carSeats + ", city=" + city + ", carColor=" + carColor + "]";
 	}
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
