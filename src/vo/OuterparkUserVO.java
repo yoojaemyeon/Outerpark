@@ -81,8 +81,5 @@ public class OuterparkUserVO {
 		return "outerparkUserVO [userId=" + userId + ", userPassword=" + userPassword + ", userName=" + userName
 				+ ", userNickname=" + userNickname + ", userMail=" + userMail + ", usertype=" + usertype + "]";
 	}
-<<<<<<< HEAD:src/vo/OuterparkUserVO.java
 }
-=======
-}
->>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9:src/OuterparkUser/OuterparkUserVO.java
+

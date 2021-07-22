@@ -1,16 +1,11 @@
 package dao;
 
-<<<<<<< HEAD
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import util.JDBCUtil;
 import vo.OuterparkUserVO;
-=======
-import util.JDBCUtil;
-import vo.PackVO;
-import vo.PaymentVO;
->>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 
 public class PaymentDAO {
 	private static PaymentDAO instance = new PaymentDAO(); 
@@ -18,11 +13,6 @@ public class PaymentDAO {
 		return instance;
 	}
 	
-<<<<<<< HEAD
-=======
-	
-	
->>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 	private PaymentDAO() {}
 	
 	JDBCUtil jdbc = JDBCUtil.getInstance();
@@ -30,7 +20,6 @@ public class PaymentDAO {
 	public int insertPayment(String userId, int packNumber,int price) {
 		String query = String.format("INSERT INTO PAYMENT VALUES(SEQ_PAYMENT.NEXTVAL,'%s',%d,SYSDATE,'결제대기',%d)"
 				,userId,packNumber,price);
-<<<<<<< HEAD
 		return jdbc.update(query);
 	}
 	
@@ -64,11 +53,3 @@ public class PaymentDAO {
 		return jdbc.update(query);
 	}
 }
-=======
-		return jdbc.Update(query);
-	}
-	
-	
-	
-}
->>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9

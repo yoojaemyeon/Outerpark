@@ -16,8 +16,4 @@ public class PatternCheckUtil {
     public boolean patternCheck(String str,String pattern){
     	return Pattern.matches(pattern,str);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9

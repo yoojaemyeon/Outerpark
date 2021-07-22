@@ -21,35 +21,18 @@ public class TourDAO {
 	public int insertTour(TourVO vo) {
 		String query = String.format("INSERT INTO TOUR VALUES (%s,'%s','%s','%s',%d,'%s','%s')"
 				, "SEQ_TOUR.NEXTVAL", vo.getUserId(), vo.getTourName(), vo.getTourTime(), vo.getTourPrice(), vo.getCity(), vo.getExplanation() );
-<<<<<<< HEAD
 		return jdbc.update(query);
-=======
-		return jdbc.Update(query);
->>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 	}
 	
 	public int deleteTour(TourVO vo) {
 		String query = String.format("DELETE FROM CAR WHERE TOUR_NUMBER = %d AND USER_ID = '%s'", vo.getTourNumber(),LoginService.loginId.getUserId());
-<<<<<<< HEAD
 		return jdbc.update(query);
-=======
-		return jdbc.Update(query);
->>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 	}
 
 	public ArrayList<HashMap<String, Object>> select(OuterparkUserVO vo) {
 		String query = String.format("SELECT * FROM TOUR WHERE USER_ID = '%s'", vo.getUserId());
 		return jdbc.selectList(query);
 	}
-<<<<<<< HEAD
-=======
-
-//	public ArrayList<HashMap<String, Object>> choice(String wantCity, int maxPeople){
-//		String query = String.format("SELECT * FROM TOUR WHERE CITY and MAX_CAPACITY = '%s', %d ", wantCity, maxPeople);
-//		return jdbc.selectList(query);
-//	}
-	
->>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 	
 	public ArrayList<HashMap<String, Object>> selectTour (TourVO vo) {
 		String query = String.format("SELECT * FROM TOUR WHERE CITY = '%s'", vo.getCity());
@@ -58,7 +41,6 @@ public class TourDAO {
 	
 	public int selectTourPrice(int tourNumber) {
 		String query = String.format("SELECT TOUR_PRICE FROM TOUR WHERE TOUR_NUMBER = %d", tourNumber);
-<<<<<<< HEAD
 		return jdbc.selectint(query, "TOUR_PRICE");
 	}
 	
@@ -72,10 +54,4 @@ public class TourDAO {
 				+ "   AND PAY.CART_NUMBER = %s", cartNum);
 		return jdbc.selectList(query);
 	}
-=======
-		return jdbc.Selectint(query, "TOUR_PRICE");
-		
-	}
-
->>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 }

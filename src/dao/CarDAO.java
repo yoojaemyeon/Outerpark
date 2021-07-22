@@ -21,20 +21,12 @@ public class CarDAO {
 	public int insertCar(CarVO vo) {
 		String query = String.format("INSERT INTO CAR VALUES ('%s','%s','%s',%d,%d,'%s','%s')"
 				, vo.getCarNumber(), vo.getUserId(), vo.getCarKind(), vo.getCarPrice(), vo.getCarSeats(), vo.getCity(), vo.getCarColor());
-<<<<<<< HEAD
 		return jdbc.update(query);
-=======
-		return jdbc.Update(query);
->>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 	}
 	
 	public int deleteCar(CarVO vo) {
 		String query = String.format("DELETE FROM CAR WHERE CAR_NUMBER = '%s' AND USER_ID = '%s'", vo.getCarNumber(),LoginService.loginId.getUserId());
-<<<<<<< HEAD
 		return jdbc.update(query);
-=======
-		return jdbc.Update(query);
->>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
 	}
 	
 	public ArrayList<HashMap<String, Object>> select(OuterparkUserVO vo) {
@@ -49,7 +41,6 @@ public class CarDAO {
 	
 	public int selectCarPrice(String carNumber) {
 		String query = String.format("SELECT CAR_PRICE FROM CAR WHERE CAR_NUMBER = '%s'", carNumber);
-<<<<<<< HEAD
 		return jdbc.selectint(query, "CAR_PRICE");
 	}
 	
@@ -63,8 +54,3 @@ public class CarDAO {
 		return jdbc.selectList(query);
 	}
 }
-=======
-		return jdbc.Selectint(query, "CAR_PRICE");
-	}
-}
->>>>>>> e2e548867e277d01b32df32f4d68afd9db1e63d9
